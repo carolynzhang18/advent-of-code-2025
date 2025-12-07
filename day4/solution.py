@@ -17,11 +17,11 @@ def takeable(r, c):
                     if 0 <= r+x < rows and 0 <= c+y < cols and grid[r+x][c+y])
     return count < 4
 
-def solution1():
+def part1():
     return sum(1 for r in range(rows) for c in range(cols) if takeable(r, c))
-print(solution1())
+print(part1())
 
-def solution2():
+def part2():
     total = 0
     removed = True
     while removed: 
@@ -33,4 +33,4 @@ def solution2():
                     total += 1
                     removed = True
     return total
-print(solution2())
+print(part2())

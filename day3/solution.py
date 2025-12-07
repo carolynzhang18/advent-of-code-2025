@@ -5,7 +5,7 @@ with open("input.txt", "r") as f:
         curr = [int(char) for char in line]
         banks.append(curr)
 
-def solution1():
+def part1():
     ans = 0
     for bank in banks:
         first = -1
@@ -17,7 +17,7 @@ def solution1():
         second = max(bank[max_i+1:])
         ans += 10 * first + second
     return ans
-print(solution1())
+print(part1())
 
 def digits_to_num(digits):
     ans = 0
@@ -26,7 +26,7 @@ def digits_to_num(digits):
         ans *= 10
     ans += digits[-1]
     return ans
-def solution2():
+def part2():
     ans = 0
     for bank in banks:
         digits = []
@@ -42,4 +42,4 @@ def solution2():
             digits.append(digit)
         ans += digits_to_num(digits)
     return ans
-print(solution2())
+print(part2())

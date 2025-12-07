@@ -6,7 +6,7 @@ with open("input.txt", "r") as f:
             left, right = range_str.split("-")
             ranges.append([left, right])
 
-def solution1():
+def part1():
     ans = 0
     for left, right in ranges:
         length = 1
@@ -22,7 +22,7 @@ def solution1():
                 ans += num
     return ans
 
-def solution2():
+def part2():
     ans = 0
     for left, right in ranges:
         for num in range(int(left), int(right) + 1):
@@ -33,5 +33,5 @@ def solution2():
                     break
     return ans
 
-print(solution1())
-print(solution2())
+print(part1())
+print(part2())

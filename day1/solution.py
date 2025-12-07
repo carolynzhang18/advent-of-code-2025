@@ -5,7 +5,7 @@ with open("input.txt", "r") as f:
         magnitude = int(line[1:]) * (1 if direction == 'R' else -1)
         rotations.append(magnitude)
 
-def solution1():
+def part1():
     curr_position = 50
     count = 0
     for rotation in rotations:
@@ -14,7 +14,7 @@ def solution1():
             count += 1
     return count
 
-def solution2():
+def part2():
     curr_position = 50
     count = 0
     for rotation in rotations:
@@ -34,5 +34,5 @@ def solution2():
         curr_position = (curr_position + leftover_rotation) % 100
     return count
 
-print(solution1())
-print(solution2())
+print(part1())
+print(part2())

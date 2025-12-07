@@ -15,7 +15,7 @@ with open("input.txt", "r") as f:
 fresh.sort()
 available.sort()
 
-def solution1():
+def part1():
     curr_range = 0
     ans = 0
     for ing in available:
@@ -26,9 +26,9 @@ def solution1():
         if curr_range != len(fresh) and fresh[curr_range][0] <= ing <= fresh[curr_range][1]:
             ans += 1
     return ans
-print(solution1())
+print(part1())
 
-def solution2():
+def part2():
     merged = [fresh[0]]
     for i in range(1, len(fresh)):
         if merged[-1][1] >= fresh[i][0]:
@@ -39,5 +39,5 @@ def solution2():
     for left, right in merged:
         ans += right - left + 1
     return ans
-print(solution2())
+print(part2())
 
